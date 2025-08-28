@@ -19,8 +19,7 @@ map("n", "<leader>fh", function()
 end, { desc = "Help" })
 
 -- toggleterm
-map("t", "<C-q>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
-map({ "n", "i", "t" }, "<C-\\>", "<cmd>ToggleTerm direction=float<cr>", { desc = "Toggle terminal" })
+map({ "n", "i", "t" }, "<C-\\><C-\\>", "<cmd>ToggleTerm direction=float<cr>", { desc = "Toggle terminal" })
 
 -- oil.nvim
 map("n", "<leader>e", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
