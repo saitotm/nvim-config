@@ -18,7 +18,10 @@ require("common.autocmds")
 
 -- lazy
 local spec = {
-	{ import = "common.plugins" },
+	{ import = "common.plugins.core" },
+	{ import = "common.plugins.edit" },
+	{ import = "common.plugins.lsp" },
+	{ import = "common.plugins.ui" },
 }
 if vim.fn.isdirectory(vim.fn.stdpath("config") .. "/lua/private/plugins") == 1 then
 	table.insert(spec, { import = "private.plugins" })
