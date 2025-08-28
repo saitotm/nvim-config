@@ -1,5 +1,10 @@
 local map = vim.keymap.set
-map("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New file" })
+-- swap jk and g(jk)
+map({ "n", "x" }, "j", "gj", { noremap = true })
+map({ "n", "x" }, "k", "gk", { noremap = true })
+
+map({ "n", "x" }, "gj", "j", { noremap = true })
+map({ "n", "x" }, "gk", "k", { noremap = true })
 
 -- Telescope
 map("n", "<leader>ff", function()
