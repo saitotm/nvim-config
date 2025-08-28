@@ -1,18 +1,31 @@
 -- bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({ "git", "clone", "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath })
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable",
+		lazypath,
+	})
 end
 vim.opt.rtp:prepend(lazypath)
 
 require("user.options")
 require("user.keymaps")
 require("user.autocmds")
-require("lazy").setup("user.plugins", {
-  ui = { border = "rounded" },
-  change_detection = { notify = false },
+
+-- lazy
+local spec = {
+	{ import = "user.plugins" },
+}
+if vim.fn.isdirectory(vim.fn.stdpath("config") .. "/lua/local/plugins") == 1 then
+	table.insert(spec, { import = "local.plugins" })
+end
+require("lazy").setup(spec, {
+	change_detection = { notify = false },
 })
 
--- 端末ローカル上書き（無ければ無視）
+-- load loca.init if it exists
 pcall(require, "local.init")
