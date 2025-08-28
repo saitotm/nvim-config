@@ -12,20 +12,20 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("user.options")
-require("user.keymaps")
-require("user.autocmds")
+require("common.options")
+require("common.keymaps")
+require("common.autocmds")
 
 -- lazy
 local spec = {
-	{ import = "user.plugins" },
+	{ import = "common.plugins" },
 }
-if vim.fn.isdirectory(vim.fn.stdpath("config") .. "/lua/local/plugins") == 1 then
-	table.insert(spec, { import = "local.plugins" })
+if vim.fn.isdirectory(vim.fn.stdpath("config") .. "/lua/private/plugins") == 1 then
+	table.insert(spec, { import = "private.plugins" })
 end
 require("lazy").setup(spec, {
 	change_detection = { notify = false },
 })
 
 -- load loca.init if it exists
-pcall(require, "local.init")
+pcall(require, "private.init")
