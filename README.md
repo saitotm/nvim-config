@@ -3,7 +3,7 @@
 - mason.nvim (LSP/formatter)
 - conform.nvim (format on save)
 - Treesitter minimal set
-- local overrides: `lua/local/` (gitignored)
+- local overrides: `lua/private/` (gitignored)
 
 ## Setup
 1. Install neovim
