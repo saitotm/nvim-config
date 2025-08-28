@@ -27,4 +27,4 @@ end, { desc = "Help" })
 map({ "n", "i", "t" }, "<C-\\><C-\\>", "<cmd>ToggleTerm direction=float<cr>", { desc = "Toggle terminal" })
 
 -- oil.nvim
-map("n", "<leader>e", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
+map("n", "<leader>e", "<CMD>Oil . --float<CR>", { desc = "Open parent directory" })
