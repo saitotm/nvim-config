@@ -15,6 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 require("common.options")
 require("common.keymaps")
 require("common.autocmds")
+require("common.ui")
 
 -- lazy
 local spec = {
