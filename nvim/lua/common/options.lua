@@ -4,6 +4,7 @@ local o, wo, bo = vim.o, vim.wo, vim.bo
 o.termguicolors = true
 
 o.number = true
+o.numberwidth = 2
 o.relativenumber = false
 wo.signcolumn = "yes"
 
