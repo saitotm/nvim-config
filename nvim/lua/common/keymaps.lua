@@ -23,6 +23,10 @@ map("n", "<leader>fh", function()
 	require("telescope.builtin").help_tags()
 end, { desc = "Help" })
 
+map("n", "<leader>fk", function()
+	require("telescope.builtin").keymaps()
+end, { desc = "Find keymap" })
+
 -- toggleterm
 map({ "n", "i", "t" }, "<C-\\><C-\\>", "<cmd>ToggleTerm direction=float<cr>", { desc = "Toggle terminal" })
 
