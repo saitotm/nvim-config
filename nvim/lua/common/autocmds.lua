@@ -25,3 +25,14 @@ au("LspAttach", {
 		map("n", "K", vim.lsp.buf.hover, "Hover")
 	end,
 })
+
+au("FileType", {
+	pattern = { "csv", "tsv", "csv_semicolon", "csv_pipe" },
+	callback = function(args)
+		local map = function(mode, lhs, rhs, desc)
+			vim.keymap.set(mode, lhs, rhs, { buffer = args.buf, desc = desc })
+		end
+
+		map("n", "<leader>csv", "<cmd>CsvViewToggle<cr>", "CSV: toggle CSV view")
+	end,
+})
