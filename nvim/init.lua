@@ -23,6 +23,7 @@ local spec = {
 	{ import = "common.plugins.edit" },
 	{ import = "common.plugins.lsp" },
 	{ import = "common.plugins.ui" },
+	{ import = "common.plugins.utils" },
 }
 if vim.fn.isdirectory(vim.fn.stdpath("config") .. "/lua/private/plugins") == 1 then
 	table.insert(spec, { import = "private.plugins" })

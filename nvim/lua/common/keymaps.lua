@@ -32,3 +32,14 @@ map({ "n", "i", "t" }, "<C-\\><C-\\>", "<cmd>ToggleTerm direction=float<cr>", { 
 
 -- oil.nvim
 map("n", "<leader>e", "<CMD>Oil . --float<CR>", { desc = "Open parent directory" })
+
+-- claudecode.nvim
+map("n", "<leader>aa", "<cmd>ClaudeCode<cr>", { desc = "Toggle Claude Code" })
+map(
+	"n",
+	"<leader>as",
+	"<cmd>ClaudeCode --dangerously-skip-permissions<cr>",
+	{ desc = "Toggle Claude Code (skip-permissions)" }
+)
+map("n", "<leader>af", "<cmd>ClaudeCodeFocus<cr>", { desc = "Focus Claude Code" })
+map("v", "<leader>as", "<cmd>ClaudeCodeSend<cr>", { desc = "Send to Claude Code" })
