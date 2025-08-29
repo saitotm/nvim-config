@@ -28,6 +28,21 @@ return {
 }
 ```
 
+### Obsidian.nvim Configuration
+
+obsidian.nvim plugin is conditionally enabled based on the presence of `private/obsidian.lua` file:
+
+To enable obsidian.nvim:
+1. Copy `obsidian_template.lua` to `obsidian.lua`
+2. Update the workspace path to match your environment:
+   ```lua
+   return {
+     workspaces = {
+       { name = "main", path = "YOUR_OBSIDIAN_VAULT_PATH" },
+     },
+   }
+   ```
+
 ## Notes
 
 - This directory is not managed by Git (already registered in .gitignore)
