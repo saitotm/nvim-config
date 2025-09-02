@@ -1,5 +1,5 @@
 return {
 	workspaces = {
-		{ name = "main", path = "~/Library/Mobile Documents/com~apple~CloudDocs/Obsidian/Vault/Main" },
+		{ name = "main", path = "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Main/" },
 	},
 }
