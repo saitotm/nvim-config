@@ -6,7 +6,7 @@
 - local overrides: `lua/private/` (gitignored)
 
 ## Setup
-1. Install neovim
+1. Install neovim, ripgrep
 
 2. Run following commands
 ```bash
