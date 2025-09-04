@@ -23,6 +23,8 @@ au("LspAttach", {
 		map("n", "gi", telescope.lsp_implementations, "Implementations (Telescope)")
 		map("n", "gr", telescope.lsp_references, "References (Telescope)")
 		map("n", "K", vim.lsp.buf.hover, "Hover")
+		map("n", "<leader>rn", "<cmd>Lspsaga rename<cr>", "Rename symbol")
+		map("n", "<leader>ca", "<cmd>Lspsaga code_action<cr>", "Code actions")
 	end,
 })
 
