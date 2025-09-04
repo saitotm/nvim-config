@@ -9,6 +9,11 @@ return {
 				no_ignore = true,
 				file_ignore_patterns = { "%.git/" },
 			},
+			live_grep = {
+				additional_args = function(_)
+					return { "--hidden", "--no-ignore", "--glob=!**/.git/*" }
+				end,
+			},
 		},
 	},
 }
