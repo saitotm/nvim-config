@@ -22,3 +22,11 @@ o.splitright = true
 o.splitbelow = true
 
 o.clipboard = "unnamedplus"
+
+-- Disable cursor blinking in terminal mode
+o.guicursor = table.concat({
+	"a:blinkon0", -- Disable blinking in all modes
+	"n-v-c-sm:block", -- Normal/Visual/Command/Showmatch: block cursor
+	"i-ci-ve:ver25", -- Insert modes: vertical bar (25%)
+	"r-cr-o:hor20", -- Replace/Operator-pending: horizontal bar (20%)
+}, ",")
