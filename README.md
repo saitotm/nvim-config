@@ -6,7 +6,11 @@
 - local overrides: `lua/private/` (gitignored)
 
 ## Setup
-1. Install neovim, ripgrep
+1. Install dependencies
+- neovim
+- tree-sitter-cli (for nvim-treesitter)
+- ripgrep (for telescope)
+- npm, cargo (for mason-lspconfig)
 
 2. Run following commands
 ```bash
