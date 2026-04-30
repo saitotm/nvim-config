@@ -7,11 +7,14 @@ return {
 			"neovim/nvim-lspconfig",
 		},
 		opts = {
-			"lua_ls",
-			"pyright",
-			"ts_ls",
-			"rust-analyzer",
-			"hls",
+			ensure_installed = {
+				"lua_ls",
+				"pyright",
+				"ts_ls",
+				"rust_analyzer",
+				"hls",
+				"purescriptls",
+			},
 		},
 	},
 	{
@@ -20,6 +23,7 @@ return {
 		opts = {
 			ensure_installed = {
 				"ormolu", -- haskell formatter
+				"purescript-tidy",
 			},
 		},
 	},

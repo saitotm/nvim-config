@@ -14,6 +14,7 @@ return {
 			"javascript",
 			"typescript",
 			"haskell",
+			"purescript",
 			"json",
 			"yaml",
 			"markdown",
